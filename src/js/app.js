@@ -3,8 +3,8 @@ import ReactDOM from "react-dom"
 import { Router, Route, IndexRoute, hashHistory } from "react-router";
 import { Provider } from "react-redux"
 
-import Archives from "./pages/Archives";
-import Featured from "./pages/Featured";
+import Products from "./pages/Products";
+import Home from "./pages/Home";
 import Settings from "./pages/Settings";
 
 import Layout from "./components/Layout"
@@ -15,8 +15,8 @@ const app = document.getElementById('app')
 ReactDOM.render(<Provider store={store}>
 	<Router history={hashHistory}>
 		<Route path="/" component={Layout}>
-			<IndexRoute component={Featured}></IndexRoute>
-			<Route path="archives(/:article)" name="archives" component={Archives}></Route>
+			<IndexRoute component={Home}></IndexRoute>
+			<Route path="Products(/:product)" name="products" component={Products}></Route>
 			<Route path="settings" name="settings" component={Settings}></Route>
 		</Route>
 	</Router>

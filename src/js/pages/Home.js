@@ -1,10 +1,11 @@
 import React from "react";
+import { connect } from "react-redux"
 
-import Article from "../components/Article";
+import Product from "../components/Product";
 
 export default class Featured extends React.Component {
     render() {
-        const Articles = [
+        const Products = [
         "Some Article",
         "Some Other Article",
         "Yet Another Article",
@@ -17,7 +18,7 @@ export default class Featured extends React.Component {
         "Some Other Article",
         "Yet Another Article",
         "Still More",
-        ].map((title, i) => <Article key={i} title={title}/> );
+        ].map((title, i) => <Product key={i} title={title}/> );
 
         const adText = [
             "Ad spot #1",
@@ -39,7 +40,7 @@ export default class Featured extends React.Component {
                     </div>
                 </div>
 
-                <div class="row">{Articles}</div>
+                <div class="row">{Products}</div>
             </div>
         );
     }
