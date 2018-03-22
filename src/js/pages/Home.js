@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux"
 
-import Product from "../components/Product";
+import Product from "../components/ProductItem";
 
 export default class Featured extends React.Component {
     render() {

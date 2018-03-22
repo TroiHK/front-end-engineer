@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 
-export default class Product extends React.Component {
+export default class ProductItem extends React.Component {
     render() {
-        const { title } = this.props;
+        const { title, id } = this.props;
 
         return (
             <div class="col-md-3 col-sm-6">
@@ -23,7 +24,7 @@ export default class Product extends React.Component {
                             <p class="price">$29,90</p>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >  <button class="btn btn-info right" > BUY ITEM</button></a>
+                            <Link class="btn btn-info right" to={"product/" + id}>BUY ITEM</Link>
                         </div>
                     </div>
                 </span>

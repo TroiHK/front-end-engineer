@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux"
 
-import { fetchProducts } from "../actions/productsActions"
+import ProductItem from "../components/ProductItem";
 
-import Product from "../components/Product";
+import { fetchProducts } from "../actions/productsActions"
 
 @connect((store) => {
     return {
@@ -13,10 +13,6 @@ import Product from "../components/Product";
 
 export default class Products extends React.Component {
     componentWillMount() {
-        this.props.dispatch(fetchProducts())
-    }
-
-    fetchProducts() {
         this.props.dispatch(fetchProducts())
     }
 
@@ -31,11 +27,9 @@ export default class Products extends React.Component {
         const Products = products
         .map((anObjectMapped, index) => {
             return (
-                <Product key={index} title={anObjectMapped.title}/>
+                <ProductItem key={index} title={anObjectMapped.title} id={anObjectMapped.id}/>
             );
         });
-
-        setTimeout(function() { console.log(products) }.bind(this), 3000);
 
         return (
             <div>

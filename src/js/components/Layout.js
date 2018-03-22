@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
         };
 
         return (
-            <div>
+            <div class="container-fluid">
                 <Nav location={location} />
 
                 <div class="container" style={containerStyle}>

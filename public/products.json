@@ -1,6 +1,6 @@
 [
 	{
-		"id": "1",
+		"id": 1,
 		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
 		"description": "",
 		"category": "Điện Thoại Smartphone",
@@ -8,7 +8,7 @@
 		"created_date": "20180301"
 	},
 	{
-		"id": "2",
+		"id": 2,
 		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
 		"description": "",
 		"category": "Điện Thoại Smartphone",
@@ -16,7 +16,7 @@
 		"created_date": "20180302"
 	},
 	{
-		"id": "2",
+		"id": 3,
 		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
 		"description": "",
 		"category": "Điện Thoại Smartphone",
@@ -24,7 +24,7 @@
 		"created_date": "20180303"
 	},
 	{
-		"id": "4",
+		"id": 4,
 		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
 		"description": "",
 		"category": "Điện Thoại Smartphone",
