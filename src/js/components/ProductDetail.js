@@ -57,7 +57,7 @@ export default class ProductDetail extends React.Component {
                         </div>            
             
                         <div class="section">
-                            <button class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Mua Ngay</button>
+                            <button class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Mua Ngay</button>
                         </div>                                        
                     </div>         
                 </div>

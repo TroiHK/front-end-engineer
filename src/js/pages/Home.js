@@ -40,72 +40,35 @@ export default class Featured extends React.Component {
 
         // load categories
         const CategoriesList = categories
+        .filter(c => c.parent == "0")
         .map((c, i) => {
             return (
                 <div class="form-check" key={i}>
                     <input type="checkbox" class="form-check-input" onChange={ (e) => this.handleClickSelectCategory(e, products) } value={c.id} id={"check" + c.id}/>
-                    <label class="form-check-label" for={"check" + c.id}>{c.title}</label>
+                    <label class="form-check-label" for={"check" + c.id}><span></span>{c.title}</label>
                 </div>
             );
         });
         // end load categories<div class="form-check">
 
         // Load product
-        if ( selectCategories.length ) {
-            const ProductsListFilter = productsFilter
-            .sort(function(a, b){
-                let keyA = new Date(a.created_date),
-                    keyB = new Date(b.created_date);
-                // Compare the 2 dates
-                if(keyA < keyB) return -1;
-                if(keyA > keyB) return 1;
-                return 0;
-            })
-            .reverse()
-            .map((p, i) => {
-                return (
-                    <ProductItem key={i} productInfo={p}/>
-                );
-            });
-
+        const ProductsList = productsFilter
+        .map((p, i) => {
             return (
-                <div class="row">
-                    <div class="side-bar col-md-3" ref="cCheckbox">
-                        {CategoriesList}
-                    </div>
-                    <div class="products-list col-md-9">
-                        <div class="row">{ProductsListFilter}</div>
-                    </div>
-                </div>
+                <ProductItem key={i} productInfo={p}/>
             );
-        } else {
-            const ProductsList = products
-            .sort(function(a, b){
-                let keyA = new Date(a.created_date),
-                    keyB = new Date(b.created_date);
-                // Compare the 2 dates
-                if(keyA < keyB) return -1;
-                if(keyA > keyB) return 1;
-                return 0;
-            })
-            .reverse()
-            .map((p, i) => {
-                return (
-                    <ProductItem key={i} productInfo={p}/>
-                );
-            });
-
-            return (
-                <div class="row">
-                    <div class="side-bar col-md-3" ref="cCheckbox">
-                        {CategoriesList}
-                    </div>
-                    <div class="products-list col-md-9">
-                        <div class="row">{ProductsList}</div>
-                    </div>
-                </div>
-            );
-        }
+        });
         // end Load product
+
+        return (
+            <div class="row">
+                <div class="side-bar col-md-3" ref="cCheckbox">
+                    {CategoriesList}
+                </div>
+                <div class="products-list col-md-9">
+                    <div class="row">{ProductsList}</div>
+                </div>
+            </div>
+        );
     }
 }

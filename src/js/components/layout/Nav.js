@@ -6,6 +6,7 @@ export default class Nav extends React.Component {
         super()
         this.state = {
             collapsed: true,
+            collapsedDropdown: false,
         };
     }
 
@@ -14,13 +15,19 @@ export default class Nav extends React.Component {
         this.setState({collapsed});
     }
 
+    toggleCollapseDropdown() {
+        const collapsedDropdown = !this.state.collapsedDropdown;
+        this.setState({collapsedDropdown});
+    }
+
     render() {
         const { location } = this.props;
-        const { collapsed } = this.state;
+        const { collapsed, collapsedDropdown } = this.state;
         const homeClass = location.pathname === "/" ? "active" : "";
         const productsClass = location.pathname.match(/^\/archives/) ? "active" : "";
         const settingsClass = location.pathname.match(/^\/settings/) ? "active" : "";
         const navClass = collapsed ? "collapse" : "";
+        const dropdownClass = collapsedDropdown ? "show" : "";
 
         return (
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -35,22 +42,19 @@ export default class Nav extends React.Component {
                             <li class={"nav-item " + homeClass}>
                                 <IndexLink class="nav-link" to="/" onClick={this.toggleCollapse.bind(this)}>Home</IndexLink>
                             </li>
-                            <li class={"nav-item " + productsClass}>
-                                <Link class="nav-link" to="products/1" onClick={this.toggleCollapse.bind(this)}>Products</Link>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown">
-                                    Dropdown
+                            <li class={"nav-item dropdown " + dropdownClass}>
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" onClick={this.toggleCollapseDropdown.bind(this)}>
+                                    Products
                                 </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class={"dropdown-menu " + dropdownClass}>
+                                    <Link class="dropdown-item" to="products/1" onClick={this.toggleCollapseDropdown.bind(this)}>Điện Thoại, Máy Tính Bảng</Link>
+                                    <Link class="dropdown-item" to="products/2" onClick={this.toggleCollapseDropdown.bind(this)}>Tivi & Thiết Bị Nghe Nhìn</Link>
+                                    <Link class="dropdown-item" to="products/3" onClick={this.toggleCollapseDropdown.bind(this)}>Thiết Bị Số - Phụ Kiện Số</Link>
+                                    <Link class="dropdown-item" to="products/4" onClick={this.toggleCollapseDropdown.bind(this)}>Laptop & Máy Vi Tính</Link>
+                                    <Link class="dropdown-item" to="products/5" onClick={this.toggleCollapseDropdown.bind(this)}>Điện Thoại Smartphone</Link>
+                                    <Link class="dropdown-item" to="products/6" onClick={this.toggleCollapseDropdown.bind(this)}>Máy Tính Bảng</Link>
+                                    <Link class="dropdown-item" to="products/7" onClick={this.toggleCollapseDropdown.bind(this)}>Tivi</Link>
                                 </div>
-                            </li>
-                            <li class={"nav-item " + settingsClass}>
-                                <Link class="nav-link" to="settings" onClick={this.toggleCollapse.bind(this)}>Settings</Link>
                             </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">

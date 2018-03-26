@@ -24,12 +24,17 @@ export function filterProductByCategory(categoryid, products) {
 
 export function fetchProductsFilter(selectCategories, products) {
     const categoriesFiltered = products.map(p => p.categories.filter(c => selectCategories.indexOf(c.id) >= 0));
-    console.log(categoriesFiltered);
     const productsFiltered = products.filter((p, i) => categoriesFiltered[i].length > 0);
-    console.log(productsFiltered);
     return {
         type: "products/FETCH_PRODUCTS_FILTER",
+        products: products,
         productsFilter: productsFiltered,
         selectCategories
+    }
+};
+
+export function updateFetchedCategory() {
+    return {
+        type: "products/FETCH_UPDATE_FETCHHEDCATEGORY"
     }
 };

@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 
 import ProductItem from "../components/ProductItem";
 
-import { fetchProducts, filterProductByCategory } from "../actions/productsActions"
+import { fetchProducts, filterProductByCategory, updateFetchedCategory } from "../actions/productsActions"
 
 @connect((store) => {
     return {
@@ -14,9 +14,21 @@ import { fetchProducts, filterProductByCategory } from "../actions/productsActio
 })
 
 export default class Products extends React.Component {
+    componentWillReceiveProps (newProps) {
+        if( newProps.params.categoryid !== this.props.params.categoryid ) {
+            const { products } = this.props;
+            console.log(this.props.params.categoryid);
+            this.props.dispatch(filterProductByCategory(newProps.params.categoryid, products));
+        }
+    }
+
     componentDidMount() {
         const { products } = this.props;
         if ( !products.length ) this.props.dispatch(fetchProducts());
+    }
+
+    componentWillUnmount() {
+        this.props.dispatch(updateFetchedCategory());
     }
 
     render() {
@@ -44,8 +56,10 @@ export default class Products extends React.Component {
             );
 
             return (
-                <div>
-                    <div class="row">{ProductsCategory}</div>
+                <div class="products-list">
+                    <div class="row">
+                        {ProductsCategory}
+                    </div>
                 </div>
             );
         }

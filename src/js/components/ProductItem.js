@@ -30,7 +30,7 @@ export default class ProductItem extends React.Component {
                         <img class="card-img-top" src={productInfo.image_url} alt="..."/>
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title">{productInfo.title}</h4>
+                        <h5 class="card-title">{productInfo.title}</h5>
                         <div class="product-ratings">
                             {ratingsList}
                         </div>
@@ -39,11 +39,11 @@ export default class ProductItem extends React.Component {
                         </p>
                         <hr class="line"/>
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
+                            <div class="col-md-6">
                                 <p class="price">{priceFormat} đ</p>
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <Link class="btn btn-info right" to={"product/" + productInfo.id}>Mua Ngay</Link>
+                            <div class="col-md-6 right">
+                                <Link class="btn btn-primary" to={"product/" + productInfo.id}>Mua Ngay</Link>
                             </div>
                         </div>
                     </div>

@@ -22,6 +22,7 @@ export default function reducer(state={
                 fetching: false,
                 fetched: true,
                 products: action.payload,
+                productsFilter: action.payload,
             }
         }
         case "products/FETCH_PRODUCTS_CATEGORY": {
@@ -32,12 +33,26 @@ export default function reducer(state={
                 fetchedCategory: true
             }
         }
-        case "products/FETCH_PRODUCTS_FILTER": {
-            const { productsFilter, selectCategories } = action;
+        case "products/FETCH_UPDATE_FETCHHEDCATEGORY": {
             return {
                 ...state,
-                productsFilter: productsFilter,
-                selectCategories
+                fetchedCategory: false
+            }
+        }
+        case "products/FETCH_PRODUCTS_FILTER": {
+            const { productsFilter, selectCategories, products } = action;
+            if ( selectCategories.length ) {
+                return {
+                    ...state,
+                    productsFilter : productsFilter,
+                    selectCategories
+                }
+            } else {
+                return {
+                    ...state,
+                    productsFilter : products,
+                    selectCategories
+                }
             }
         }
     }
