@@ -1,33 +1,53 @@
-import React from "react";
-import { Link } from "react-router";
+import React from "react"
+import { Link } from "react-router"
 
 export default class ProductItem extends React.Component {
     render() {
-        const { title, id } = this.props;
+        const { productInfo } = this.props;
+
+        const priceFormat = productInfo.price.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
+        // ratingsArray
+        let ratings = productInfo.ratings;
+        let ratingsArray = [];
+
+        for (var i = 0; i < ratings; i++) {
+            ratingsArray[i] = true;
+        }
+
+        const ratingsList = ratingsArray
+        .map((r, i) => {
+            return (
+                <i class="fas fa-star" key={i}></i>
+            );
+        });
+        // end ratingsArray
 
         return (
-            <div class="col-md-3 col-sm-6">
-                <span class="thumbnail">
-                    <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="..."/>
-                    <h4>{title}</h4>
-                    <div class="ratings">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
+            <div class="col-md-4 col-sm-6">
+                <div class="card product-item">
+                    <div class="product-image">
+                        <img class="card-img-top" src={productInfo.image_url} alt="..."/>
                     </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <hr class="line"/>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <p class="price">$29,90</p>
+                    <div class="card-body">
+                        <h4 class="card-title">{productInfo.title}</h4>
+                        <div class="product-ratings">
+                            {ratingsList}
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <Link class="btn btn-info right" to={"product/" + id}>BUY ITEM</Link>
+                        <p class="card-text product-description">
+                            {productInfo.shortdescription}
+                        </p>
+                        <hr class="line"/>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <p class="price">{priceFormat} đ</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <Link class="btn btn-info right" to={"product/" + productInfo.id}>Mua Ngay</Link>
+                            </div>
                         </div>
                     </div>
-                </span>
+                </div>
             </div>
         );
     }

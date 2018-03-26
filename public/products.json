@@ -1,35 +1,102 @@
 [
 	{
-		"id": 1,
-		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
-		"description": "",
-		"category": "Điện Thoại Smartphone",
-		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/1/_/1.u4939.d20170921.t115008.259587.jpg",
-		"created_date": "20180301"
+		"id": "1",
+		"title": "Điện Thoại Huawei Y7 Pro (2018) - Hàng Chính Hãng",
+		"ratings": 4,
+		"price": "3990000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Chính hãng, Nguyên seal, Mới 100%#Miễn phí giao hàng toàn quốc#Thiết kế: Nguyên khối#Màn hình: HD+ (720 x 1440 pixels)#Camera Trước/Sau: 8 MP / 13 MP và 2 MP (2 camera)#CPU: Qualcomm Snapdragon 430 8 nhân 64 bit#Bộ nhớ: 32GB#RAM: 3GB#Dung lượng Pin: 3000 mAh#Tính năng: Mở khóa bằng khuôn mặt, chặn tin nhắn, chạm 2 lần tắt/mở màn hình",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/ts/product/09/8e/22/64f64f22358bc34e32e22ea6c75efe3b.jpg",
+		"categories": [
+			{
+				"id": "5",
+				"primary": true
+			},
+			{
+				"id": "1",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-01"
 	},
 	{
-		"id": 2,
-		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
-		"description": "",
-		"category": "Điện Thoại Smartphone",
-		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/1/_/1.u4939.d20170921.t115008.259587.jpg",
-		"created_date": "20180302"
+		"id": "2",
+		"title": "Điện Thoại iPhone X 64GB - Hàng Chính Hãng Mã VN/A",
+		"ratings": 5,
+		"price": "25890000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Chính hãng, Nguyên seal, Mới 100%, Chưa Active#Miễn phí giao hàng toàn quốc#Thiết kế: Nguyên khối#Màn hình: Super AMOLED capacitive touchscreen, 5.8 inch HD#Camera Trước/Sau: 7MP/ 2 camera 12MP#CPU: Apple A11 Bionic 6 nhân#Bộ nhớ: 64GB#RAM: 3GB#SIM: 1 Nano SIM#Tính năng: Chống nước, chống bụi, Face ID",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/1/_/1.u4939.d20170921.t121045.673890.jpg",
+		"categories": [
+			{
+				"id": "5",
+				"primary": true
+			},
+			{
+				"id": "1",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-05"
 	},
 	{
-		"id": 3,
-		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
-		"description": "",
-		"category": "Điện Thoại Smartphone",
-		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/1/_/1.u4939.d20170921.t115008.259587.jpg",
-		"created_date": "20180303"
+		"id": "3",
+		"title": "Điện Thoại Huawei Y7 Pro (2018) - Hàng Chính Hãng",
+		"ratings": 3,
+		"price": "3990000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Chính hãng, Nguyên seal, Mới 100%#Miễn phí giao hàng toàn quốc#Thiết kế: Nguyên khối#Màn hình: HD+ (720 x 1440 pixels)#Camera Trước/Sau: 8 MP / 13 MP và 2 MP (2 camera)#CPU: Qualcomm Snapdragon 430 8 nhân 64 bit#Bộ nhớ: 32 GB#RAM: 3 GB#Dung lượng Pin: 3000 mAh#Tính năng: Mở khóa bằng khuôn mặt, chặn tin nhắn, chạm 2 lần tắt/mở màn hình",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/ts/product/09/8e/22/64f64f22358bc34e32e22ea6c75efe3b.jpg",
+		"categories": [
+			{
+				"id": "5",
+				"primary": true
+			},
+			{
+				"id": "1",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-04"
 	},
 	{
-		"id": 4,
-		"title": "Điện Thoại iPhone 8 Plus 64GB - Nhập Khẩu Chính Hãng",
-		"description": "",
-		"category": "Điện Thoại Smartphone",
-		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/1/_/1.u4939.d20170921.t115008.259587.jpg",
-		"created_date": "20180304"
+		"id": "4",
+		"title": "Điện Thoại Huawei Y7 Pro (2018) - Hàng Chính Hãng",
+		"ratings": 4,
+		"price": "3990000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Chính hãng, Nguyên seal, Mới 100%#Miễn phí giao hàng toàn quốc#Thiết kế: Nguyên khối#Màn hình: HD+ (720 x 1440 pixels)#Camera Trước/Sau: 8 MP / 13 MP và 2 MP (2 camera)#CPU: Qualcomm Snapdragon 430 8 nhân 64 bit#Bộ nhớ: 32 GB#RAM: 3 GB#Dung lượng Pin: 3000 mAh#Tính năng: Mở khóa bằng khuôn mặt, chặn tin nhắn, chạm 2 lần tắt/mở màn hình",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/ts/product/09/8e/22/64f64f22358bc34e32e22ea6c75efe3b.jpg",
+		"categories": [
+			{
+				"id": "5",
+				"primary": true
+			},
+			{
+				"id": "1",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-03"
+	},
+	{
+		"id": "5",
+		"title": "Tivi LED Sharp 32 inch LC-32LE280X",
+		"ratings": 4,
+		"price": "3790000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Chính hãng, Nguyên seal, Mới 100%#Miễn phí giao hàng toàn quốc#Thiết kế: Nguyên khối#Màn hình: HD+ (720 x 1440 pixels)#Camera Trước/Sau: 8 MP / 13 MP và 2 MP (2 camera)#CPU: Qualcomm Snapdragon 430 8 nhân 64 bit#Bộ nhớ: 32 GB#RAM: 3 GB#Dung lượng Pin: 3000 mAh#Tính năng: Mở khóa bằng khuôn mặt, chặn tin nhắn, chạm 2 lần tắt/mở màn hình",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/3/2/32le280x-.u4064.d20170401.t221213.721363.jpg",
+		"categories": [
+			{
+				"id": "7",
+				"primary": true
+			},
+			{
+				"id": "2",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-26"
 	}
-
 ]

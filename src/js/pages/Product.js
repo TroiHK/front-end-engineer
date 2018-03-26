@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux"
 
-import ProductDetail from "../components/ProductDetail";
+import ProductDetail from "../components/ProductDetail"
 
 import { fetchProducts } from "../actions/productsActions"
 
@@ -24,15 +24,15 @@ export default class Products extends React.Component {
         const { products } = this.props;
 
         if ( products.length ) {
-            const result = products.find( product => product.id == productid );
+            const productInfo = products.find( product => product.id == productid );
 
-            if ( !result ) 
+            if ( !productInfo ) 
             return (
                 <h1>Product not found!</h1>
             );
 
             return (
-                <ProductDetail result={result}/>
+                <ProductDetail productInfo={productInfo}/>
             );
         }
 
