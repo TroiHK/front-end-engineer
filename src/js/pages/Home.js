@@ -16,9 +16,9 @@ import { fetchProducts, fetchProductsFilter } from "../actions/productsActions"
 })
 
 export default class Featured extends React.Component {
-    handleClickSelectCategory = (e, products) => {
+    handleClickSelectCategory = (e) => {
         let value = e.target.value;
-        let { selectCategories } = this.props;
+        let { selectCategories, products } = this.props;
 
         if (e.target.checked) {
             selectCategories.push(value);
@@ -35,23 +35,43 @@ export default class Featured extends React.Component {
     }
 
     render() {
-        const { categories, products, productsFilter, selectCategories } = this.props;
+        const { categories, productsFilter } = this.props;
 
         // load categories
         const CategoriesList = categories
         .filter(c => c.parent == "0")
+        // .sort(function(a, b){
+        //     let keyA = a.id,                    
+        //        keyB = b.id;
+        //     // Compare the 2 dates
+        //     if(keyA < keyB) return -1;
+        //     if(keyA > keyB) return 1;
+        //     return 0;
+        // })
+        // .reverse()
         .map((c, i) => {
             return (
                 <div class="form-check" key={i}>
-                    <input type="checkbox" class="form-check-input" onChange={ (e) => this.handleClickSelectCategory(e, products) } value={c.id} id={"check" + c.id}/>
+                    <input type="checkbox" class="form-check-input" onChange={ (e) => this.handleClickSelectCategory(e) } value={c.id} id={"check" + c.id}/>
                     <label class="form-check-label" for={"check" + c.id}><span></span>{c.title}</label>
                 </div>
             );
         });
         // end load categories<div class="form-check">
+
+        console.log(productsFilter);
         
         // Load product
         const ProductsList = productsFilter
+        // .sort(function(a, b){
+        //     let keyA = new Date(a.created_date),                    
+        //        keyB = new Date(b.created_date);
+        //     // Compare the 2 dates
+        //     if(keyA < keyB) return -1;
+        //     if(keyA > keyB) return 1;
+        //     return 0;
+        // })
+        // .reverse()
         .map((p, i) => {
             return (
                 <ProductItem key={i} productInfo={p}/>
