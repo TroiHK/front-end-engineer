@@ -38,3 +38,21 @@ export function updateFetchedCategory() {
         type: "products/FETCH_UPDATE_FETCHHEDCATEGORY"
     }
 };
+
+export function fetchSearchValue(searchValue) {
+    return {
+        type: "products/FETCH_PRODUCTS_SEARCH",
+        searchValue
+    }
+};
+
+export function fetchSearchResults(searchValue, products) {
+    const searchValueLowercase = searchValue.toLowerCase();
+    const resultsProducts = searchValue 
+      ? products.filter((p) => p.title.toLowerCase().includes(searchValueLowercase) || p.description.toLowerCase().includes(searchValueLowercase))
+      : products;
+    return {
+        type: "products/FETCH_RESULTS_SEARCH",
+        resultsProducts: resultsProducts
+    }
+};

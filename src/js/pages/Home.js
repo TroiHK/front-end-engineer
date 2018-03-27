@@ -35,8 +35,7 @@ export default class Featured extends React.Component {
     }
 
     render() {
-        const { categories } = this.props;
-        const { products, productsFilter, selectCategories } = this.props;
+        const { categories, products, productsFilter, selectCategories } = this.props;
 
         // load categories
         const CategoriesList = categories
@@ -50,7 +49,7 @@ export default class Featured extends React.Component {
             );
         });
         // end load categories<div class="form-check">
-
+        
         // Load product
         const ProductsList = productsFilter
         .map((p, i) => {
@@ -62,10 +61,10 @@ export default class Featured extends React.Component {
 
         return (
             <div class="row">
-                <div class="side-bar col-md-3" ref="cCheckbox">
+                <div class="side-bar col-xl-3" ref="cCheckbox">
                     {CategoriesList}
                 </div>
-                <div class="products-list col-md-9">
+                <div class="products-list col-xl-9">
                     <div class="row">{ProductsList}</div>
                 </div>
             </div>

@@ -3,6 +3,8 @@ export default function reducer(state={
         productsCategory: [],
         productsFilter: [],
         selectCategories: [],
+        resultsProducts: [],
+        searchValue: '',
         fetching: false,
         fetched: false,
         fetchedCategory: false,
@@ -44,15 +46,29 @@ export default function reducer(state={
             if ( selectCategories.length ) {
                 return {
                     ...state,
-                    productsFilter : productsFilter,
+                    productsFilter: productsFilter,
                     selectCategories
                 }
             } else {
                 return {
                     ...state,
-                    productsFilter : products,
+                    productsFilter: products,
                     selectCategories
                 }
+            }
+        }
+        case "products/FETCH_PRODUCTS_SEARCH": {
+            const { searchValue } = action;
+            return {
+                ...state,
+                searchValue
+            }
+        }
+        case "products/FETCH_RESULTS_SEARCH": {
+            const { resultsProducts } = action;
+            return {
+                ...state,
+                resultsProducts: resultsProducts
             }
         }
     }

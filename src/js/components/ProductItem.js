@@ -24,7 +24,7 @@ export default class ProductItem extends React.Component {
         // end ratingsArray
 
         return (
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="card product-item">
                     <div class="product-image">
                         <img class="card-img-top" src={productInfo.image_url} alt="..."/>
@@ -39,10 +39,10 @@ export default class ProductItem extends React.Component {
                         </p>
                         <hr class="line"/>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-6 col-sm-6">
                                 <p class="price">{priceFormat} đ</p>
                             </div>
-                            <div class="col-md-6 right">
+                            <div class="col-6 col-sm-6 right">
                                 <Link class="btn btn-primary" to={"product/" + productInfo.id}>Mua Ngay</Link>
                             </div>
                         </div>

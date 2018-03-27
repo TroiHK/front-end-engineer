@@ -17,7 +17,6 @@ export default class Products extends React.Component {
     componentWillReceiveProps (newProps) {
         if( newProps.params.categoryid !== this.props.params.categoryid ) {
             const { products } = this.props;
-            console.log(this.props.params.categoryid);
             this.props.dispatch(filterProductByCategory(newProps.params.categoryid, products));
         }
     }
@@ -35,9 +34,8 @@ export default class Products extends React.Component {
         const { products } = this.props;
 
         if ( products.length ) {
-            const { params } = this.props;
+            const { params, productsCategory, fetchedCategory } = this.props;
             const { categoryid } = params;
-            const { productsCategory, fetchedCategory } = this.props;
 
             if ( !fetchedCategory ) this.props.dispatch(filterProductByCategory(categoryid, products));
 
@@ -48,7 +46,7 @@ export default class Products extends React.Component {
                 );
             });
 
-            if ( !ProductsCategory )
+            if ( !productsCategory.length )
             return (
                 <div>
                     Products not found!

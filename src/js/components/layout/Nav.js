@@ -1,5 +1,14 @@
 import React from "react"
 import { IndexLink, Link } from "react-router"
+import { connect } from "react-redux"
+
+import { fetchSearchValue } from "../../actions/productsActions"
+
+@connect((store) => {
+    return {
+        searchValue: store.products.searchValue,
+    };
+})
 
 export default class Nav extends React.Component {
     constructor() {
@@ -20,8 +29,12 @@ export default class Nav extends React.Component {
         this.setState({collapsedDropdown});
     }
 
+    handleSearch(searchValue) {
+        this.props.dispatch(fetchSearchValue(searchValue));
+    }
+
     render() {
-        const { location } = this.props;
+        const { location, searchValue } = this.props;
         const { collapsed, collapsedDropdown } = this.state;
         const homeClass = location.pathname === "/" ? "active" : "";
         const productsClass = location.pathname.match(/^\/archives/) ? "active" : "";
@@ -58,7 +71,8 @@ export default class Nav extends React.Component {
                             </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value={searchValue} onInput={(e)=>this.handleSearch(e.target.value)}/>
+                            <Link class="btn btn-danger my-2 my-sm-0" to="search">Search</Link>
                         </form>
                     </div>
                 </div>

@@ -18,10 +18,8 @@ export default class Products extends React.Component {
     }
 
     render() {
-        const { params } = this.props;
+        const { params, products } = this.props;
         const { productid } = params;
-
-        const { products } = this.props;
 
         if ( products.length ) {
             const productInfo = products.find( product => product.id == productid );

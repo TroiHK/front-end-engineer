@@ -98,5 +98,45 @@
 			}
 		],
 		"created_date": "2018-03-26"
+	},
+	{
+		"id": "6",
+		"title": "Cáp Sạc Pisen 3 In 1",
+		"ratings": 4,
+		"price": "990000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Phù hợp với hầu hết các thiết bị#Nhỏ gọn, dễ sử dụng#Độ dài 0.8 m thuận tiện sử dụng",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/media/catalog/product/c/a/cap-sac-pisen-3-in-1-trang-5490-8431501-1-zoom.jpg",
+		"categories": [
+			{
+				"id": "8",
+				"primary": true
+			},
+			{
+				"id": "3",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-25"
+	},
+	{
+		"id": "7",
+		"title": "Laptop Asus VivoBook S15 S510UQ-BQ483T",
+		"ratings": 4,
+		"price": "18790000",
+		"shortdescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+		"description": "Chính hãng, Nguyên seal, Mới 100%#Miễn phí giao hàng toàn quốc#Thiết kế: Nguyên khối",
+		"image_url": "https://vcdn.tikicdn.com/cache/w1200/ts/product/b9/57/b9/a4f6b0b786bccc28d74177c47e8c4496.jpg",
+		"categories": [
+			{
+				"id": "9",
+				"primary": true
+			},
+			{
+				"id": "4",
+				"primary": false
+			}
+		],
+		"created_date": "2018-03-25"
 	}
 ]

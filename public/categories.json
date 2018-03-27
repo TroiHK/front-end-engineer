@@ -33,5 +33,15 @@
 		"id": "7",
 		"title": "Tivi",
 		"parent": "2"
+	},
+	{
+		"id": "8",
+		"title": "Phụ kiện điện thoại",
+		"parent": "3"
+	},
+	{
+		"id": "9",
+		"title": "Laptop",
+		"parent": "4"
 	}
 ]

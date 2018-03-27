@@ -6,7 +6,7 @@ import { Provider } from "react-redux"
 import Products from "./pages/Products"
 import Product from "./pages/Product"
 import Home from "./pages/Home"
-import Settings from "./pages/Settings"
+import Search from "./pages/Search"
 
 import Layout from "./components/Layout"
 import store from "./store"
@@ -19,7 +19,7 @@ ReactDOM.render(<Provider store={store}>
 			<IndexRoute component={Home}></IndexRoute>
 			<Route path="products(/:categoryid)" name="products" component={Products}></Route>
 			<Route path="product(/:productid)" name="product" component={Product}></Route>
-			<Route path="settings" name="settings" component={Settings}></Route>
+			<Route path="search" name="search" component={Search}></Route>
 		</Route>
 	</Router>
 </Provider>, app);
